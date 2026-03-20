@@ -157,3 +157,27 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+const filterBtns = document.querySelectorAll("[data-filter-btn]");
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", function () {
+
+    filterBtns.forEach(b => b.classList.remove("active"));
+    this.classList.add("active");
+
+    const selected = this.innerText.toLowerCase();
+
+    filterItems.forEach(item => {
+      const category = item.dataset.category;
+
+      if (selected === "all" || selected === category) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+
+  });
+});
