@@ -1236,3 +1236,41 @@
 </body>
 
 </html>
+
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
+const modalRole = document.querySelector("[data-modal-role]");
+const overlay = document.querySelector("[data-overlay]");
+
+const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+
+testimonialsItem.forEach(item => {
+  item.addEventListener("click", function () {
+
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+    // THIS is the missing piece
+    const role = this.querySelector(".testimonials-role");
+    modalRole.innerHTML = role ? role.innerHTML : "";
+
+    modalContainer.classList.add("active");
+    overlay.classList.add("active");
+  });
+});
+
+modalCloseBtn.addEventListener("click", () => {
+  modalContainer.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
+overlay.addEventListener("click", () => {
+  modalContainer.classList.remove("active");
+  overlay.classList.remove("active");
+});
