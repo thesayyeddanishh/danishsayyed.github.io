@@ -1033,6 +1033,15 @@ main {
 /*-----------------------------------*\
   #projects
 \*-----------------------------------*/
+.projects-post-item {
+  display: none;
+}
+
+.projects-post-item.active {
+  display: block;
+  animation: scaleUp 0.25s ease forwards;
+}
+
 
 .projects-posts { margin-bottom: 10px; }
 
