@@ -66,7 +66,7 @@ if (projectsSection) {
       filterBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      const selected = btn.innerText.toLowerCase();
+      const selected = btn.innerText.toLowerCase().trim();
 
       // filtering logic
       filterItems.forEach(item => {
