@@ -721,10 +721,6 @@
 
 
 
-      <!--
-        - #PORTFOLIO
-      -->
-
       <!-- ================= PORTFOLIO ================= -->
 
 <article class="portfolio" data-page="portfolio">
@@ -756,26 +752,43 @@
 
     </ul>
 
-    <!-- DROPDOWN (mobile) -->
-    <div class="filter-select-box">
+    <!-- PROJECT LIST -->
+    <ul class="project-list">
 
-      <button class="filter-select" data-select>
-        <div class="select-value" data-selecct-value>Select category</div>
-        <div class="select-icon">
-          <ion-icon name="chevron-down"></ion-icon>
-        </div>
-      </button>
+      <li class="project-item active" data-filter-item data-category="web development">
+        <figure class="project-img">
+          <img src="./assets/images/project-1.jpg" loading="lazy">
+        </figure>
+        <h3 class="project-title">Finance Dashboard</h3>
+        <p class="project-category">Web development</p>
+      </li>
 
-      <ul class="select-list">
-        <li class="select-item"><button data-select-item>All</button></li>
-        <li class="select-item"><button data-select-item>Web design</button></li>
-        <li class="select-item"><button data-select-item>Applications</button></li>
-        <li class="select-item"><button data-select-item>Web development</button></li>
-      </ul>
+      <li class="project-item active" data-filter-item data-category="web design">
+        <figure class="project-img">
+          <img src="./assets/images/project-3.jpg" loading="lazy">
+        </figure>
+        <h3 class="project-title">Fundo UI</h3>
+        <p class="project-category">Web design</p>
+      </li>
 
-    </div>
+      <li class="project-item active" data-filter-item data-category="applications">
+        <figure class="project-img">
+          <img src="./assets/images/project-8.jpg" loading="lazy">
+        </figure>
+        <h3 class="project-title">Task Manager</h3>
+        <p class="project-category">Applications</p>
+      </li>
 
-    <article class="projects" data-page="projects">
+    </ul>
+
+  </section>
+
+</article>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<article class="projects" data-page="projects">
 
   <header>
     <h2 class="h2 article-title">Projects</h2>
@@ -815,119 +828,89 @@
     <!-- PROJECT LIST -->
     <ul class="projects-posts-list">
 
-      <!-- 1 -->
       <li class="projects-post-item active" data-filter-item data-category="tableau">
-        <a href="#">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/projects-1.jpg" loading="lazy">
-          </figure>
+        <figure class="projects-banner-box">
+          <img src="./assets/images/projects-1.jpg" loading="lazy">
+        </figure>
 
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Tableau</p>
-              <span class="dot"></span>
-              <time>2024</time>
-            </div>
-
-            <h3 class="h3 projects-item-title">Sales Performance Dashboard</h3>
-
-            <p class="projects-text">
-              Built an interactive Tableau dashboard to track KPIs, revenue trends, and regional performance.
-            </p>
+        <div class="projects-content">
+          <div class="projects-meta">
+            <p class="projects-category">Tableau</p>
+            <span class="dot"></span>
+            <time>2024</time>
           </div>
-        </a>
+
+          <h3 class="h3 projects-item-title">Sales Dashboard</h3>
+          <p class="projects-text">Interactive dashboard for tracking KPIs and trends.</p>
+        </div>
       </li>
 
-      <!-- 2 -->
       <li class="projects-post-item active" data-filter-item data-category="power bi">
-        <a href="#">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/projects-2.jpg" loading="lazy">
-          </figure>
+        <figure class="projects-banner-box">
+          <img src="./assets/images/projects-2.jpg" loading="lazy">
+        </figure>
 
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Power BI</p>
-              <span class="dot"></span>
-              <time>2024</time>
-            </div>
-
-            <h3 class="h3 projects-item-title">Operations Dashboard</h3>
-
-            <p class="projects-text">
-              Created a Power BI dashboard to monitor operational efficiency and identify bottlenecks.
-            </p>
+        <div class="projects-content">
+          <div class="projects-meta">
+            <p class="projects-category">Power BI</p>
+            <span class="dot"></span>
+            <time>2024</time>
           </div>
-        </a>
+
+          <h3 class="h3 projects-item-title">Operations Dashboard</h3>
+          <p class="projects-text">Monitoring operational efficiency and bottlenecks.</p>
+        </div>
       </li>
 
-      <!-- 3 -->
       <li class="projects-post-item active" data-filter-item data-category="python">
-        <a href="#">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/projects-3.jpg" loading="lazy">
-          </figure>
+        <figure class="projects-banner-box">
+          <img src="./assets/images/projects-3.jpg" loading="lazy">
+        </figure>
 
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Python</p>
-              <span class="dot"></span>
-              <time>2024</time>
-            </div>
-
-            <h3 class="h3 projects-item-title">Match Prediction Model</h3>
-
-            <p class="projects-text">
-              Developed a machine learning model using Python to predict match outcomes based on historical data.
-            </p>
+        <div class="projects-content">
+          <div class="projects-meta">
+            <p class="projects-category">Python</p>
+            <span class="dot"></span>
+            <time>2024</time>
           </div>
-        </a>
+
+          <h3 class="h3 projects-item-title">Prediction Model</h3>
+          <p class="projects-text">Machine learning model for match prediction.</p>
+        </div>
       </li>
 
-      <!-- 4 -->
       <li class="projects-post-item active" data-filter-item data-category="excel">
-        <a href="#">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/projects-4.jpg" loading="lazy">
-          </figure>
+        <figure class="projects-banner-box">
+          <img src="./assets/images/projects-4.jpg" loading="lazy">
+        </figure>
 
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Excel</p>
-              <span class="dot"></span>
-              <time>2023</time>
-            </div>
-
-            <h3 class="h3 projects-item-title">Financial Analysis Model</h3>
-
-            <p class="projects-text">
-              Built an advanced Excel model with automation, pivot tables, and forecasting capabilities.
-            </p>
+        <div class="projects-content">
+          <div class="projects-meta">
+            <p class="projects-category">Excel</p>
+            <span class="dot"></span>
+            <time>2023</time>
           </div>
-        </a>
+
+          <h3 class="h3 projects-item-title">Financial Model</h3>
+          <p class="projects-text">Advanced Excel automation and forecasting.</p>
+        </div>
       </li>
 
-      <!-- 5 -->
       <li class="projects-post-item active" data-filter-item data-category="others">
-        <a href="#">
-          <figure class="projects-banner-box">
-            <img src="./assets/images/projects-5.jpg" loading="lazy">
-          </figure>
+        <figure class="projects-banner-box">
+          <img src="./assets/images/projects-5.jpg" loading="lazy">
+        </figure>
 
-          <div class="projects-content">
-            <div class="projects-meta">
-              <p class="projects-category">Others</p>
-              <span class="dot"></span>
-              <time>2023</time>
-            </div>
-
-            <h3 class="h3 projects-item-title">Data Pipeline Automation</h3>
-
-            <p class="projects-text">
-              Automated ETL workflows to reduce manual reporting effort and improve data consistency.
-            </p>
+        <div class="projects-content">
+          <div class="projects-meta">
+            <p class="projects-category">Others</p>
+            <span class="dot"></span>
+            <time>2023</time>
           </div>
-        </a>
+
+          <h3 class="h3 projects-item-title">Data Automation</h3>
+          <p class="projects-text">ETL automation and reporting workflows.</p>
+        </div>
       </li>
 
     </ul>
@@ -935,7 +918,6 @@
   </section>
 
 </article>
-
 
 
 
