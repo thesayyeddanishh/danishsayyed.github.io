@@ -1250,15 +1250,17 @@
 
 </html>
 
-const modalContainer = document.querySelector("[data-modal-container]");
+/* ================= TESTIMONIAL MODAL ================= */
+
+const testimonialModal = document.querySelector("[data-modal-container]");
+const testimonialOverlay = document.querySelector("[data-overlay]");
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 const modalRole = document.querySelector("[data-modal-role]");
-const overlay = document.querySelector("[data-overlay]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 
 testimonialsItem.forEach(item => {
   item.addEventListener("click", function () {
@@ -1269,56 +1271,57 @@ testimonialsItem.forEach(item => {
     modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
-    // THIS is the missing piece
     const role = this.querySelector(".testimonials-role");
     modalRole.innerHTML = role ? role.innerHTML : "";
 
-    modalContainer.classList.add("active");
-    overlay.classList.add("active");
+    testimonialModal.classList.add("active");
+    testimonialOverlay.classList.add("active");
   });
 });
 
 modalCloseBtn.addEventListener("click", () => {
-  modalContainer.classList.remove("active");
-  overlay.classList.remove("active");
+  testimonialModal.classList.remove("active");
+  testimonialOverlay.classList.remove("active");
 });
 
-overlay.addEventListener("click", () => {
-  modalContainer.classList.remove("active");
-  overlay.classList.remove("active");
+testimonialOverlay.addEventListener("click", () => {
+  testimonialModal.classList.remove("active");
+  testimonialOverlay.classList.remove("active");
 });
 
 
-const items = document.querySelectorAll("[data-project-item]");
-const modal = document.querySelector("[data-project-modal]");
-const overlay = document.querySelector("[data-project-overlay]");
-const closeBtn = document.querySelector("[data-project-close]");
+/* ================= PROJECT MODAL ================= */
 
-const title = document.getElementById("project-modal-title");
-const desc = document.getElementById("project-modal-desc");
-const link = document.getElementById("project-modal-link");
+const projectItems = document.querySelectorAll("[data-project-item]");
+const projectModal = document.querySelector("[data-project-modal]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+const projectCloseBtn = document.querySelector("[data-project-close]");
 
-items.forEach(item => {
+const projectTitle = document.getElementById("project-modal-title");
+const projectDesc = document.getElementById("project-modal-desc");
+const projectLink = document.getElementById("project-modal-link");
+
+projectItems.forEach(item => {
   item.addEventListener("click", function (e) {
     e.preventDefault();
 
     const parent = this.parentElement;
 
-    title.innerText = parent.querySelector("[data-project-title]").innerText;
-    desc.innerText = parent.querySelector(".project-description").innerText;
-    link.href = parent.querySelector(".project-link").dataset.projectLink;
+    projectTitle.innerText = parent.querySelector("[data-project-title]").innerText;
+    projectDesc.innerText = parent.querySelector(".project-description")?.innerText || "";
+    projectLink.href = parent.querySelector(".project-link")?.dataset.projectLink || "#";
 
-    modal.classList.add("active");
-    overlay.classList.add("active");
+    projectModal.classList.add("active");
+    projectOverlay.classList.add("active");
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("active");
-  overlay.classList.remove("active");
+projectCloseBtn.addEventListener("click", () => {
+  projectModal.classList.remove("active");
+  projectOverlay.classList.remove("active");
 });
 
-overlay.addEventListener("click", () => {
-  modal.classList.remove("active");
-  overlay.classList.remove("active");
+projectOverlay.addEventListener("click", () => {
+  projectModal.classList.remove("active");
+  projectOverlay.classList.remove("active");
 });
