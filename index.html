@@ -725,216 +725,134 @@
         - #PORTFOLIO
       -->
 
-      <ul class="project-list">
+      <!-- ================= PORTFOLIO ================= -->
 
-  <!-- 1 -->
-  <li class="project-item active" data-filter-item data-category="web development">
-    <a href="#" data-project-item>
+<article class="portfolio" data-page="portfolio">
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
+
+  <section class="projects">
+
+    <!-- FILTER BUTTONS -->
+    <ul class="filter-list">
+
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Web design</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Applications</button>
+      </li>
+
+      <li class="filter-item">
+        <button data-filter-btn>Web development</button>
+      </li>
+
+    </ul>
+
+    <!-- DROPDOWN (mobile) -->
+    <div class="filter-select-box">
+
+      <button class="filter-select" data-select>
+        <div class="select-value" data-selecct-value>Select category</div>
+        <div class="select-icon">
+          <ion-icon name="chevron-down"></ion-icon>
         </div>
-        <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-      </figure>
+      </button>
 
-      <h3 class="project-title" data-project-title>Finance Dashboard</h3>
-      <p class="project-category">Web development</p>
+      <ul class="select-list">
+        <li class="select-item"><button data-select-item>All</button></li>
+        <li class="select-item"><button data-select-item>Web design</button></li>
+        <li class="select-item"><button data-select-item>Applications</button></li>
+        <li class="select-item"><button data-select-item>Web development</button></li>
+      </ul>
 
-      <p class="project-description" style="display:none;">
-        Built a financial analytics dashboard to track KPIs, revenue trends, and performance metrics in real time.
-      </p>
+    </div>
 
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
+    <!-- PROJECT LIST -->
+    <ul class="project-list">
 
-    </a>
-  </li>
+      <!-- PROJECT TEMPLATE (REPEAT THIS STRUCTURE) -->
 
-  <!-- 2 -->
-  <li class="project-item active" data-filter-item data-category="web development">
-    <a href="#" data-project-item>
+      <li class="project-item active" data-filter-item data-category="web development">
+        <a href="#" data-project-item>
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-      </figure>
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+          </figure>
 
-      <h3 class="project-title" data-project-title>Orizon Platform</h3>
-      <p class="project-category">Web development</p>
+          <h3 class="project-title" data-project-title>Finance Dashboard</h3>
+          <p class="project-category">Web development</p>
 
-      <p class="project-description" style="display:none;">
-        Developed an analytics interface to visualize user engagement and performance metrics across platforms.
-      </p>
+          <p class="project-description" style="display:none;">
+            Built a financial analytics dashboard to track KPIs and performance trends.
+          </p>
 
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
+          <span class="project-link" data-project-link="https://yourlink.com"></span>
 
-    </a>
-  </li>
+        </a>
+      </li>
 
-  <!-- 3 -->
-  <li class="project-item active" data-filter-item data-category="web design">
-    <a href="#" data-project-item>
+      <li class="project-item active" data-filter-item data-category="web design">
+        <a href="#" data-project-item>
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-      </figure>
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+          </figure>
 
-      <h3 class="project-title" data-project-title>Fundo UI</h3>
-      <p class="project-category">Web design</p>
+          <h3 class="project-title" data-project-title>Fundo UI</h3>
+          <p class="project-category">Web design</p>
 
-      <p class="project-description" style="display:none;">
-        Designed a clean and intuitive UI focused on accessibility and user experience.
-      </p>
+          <p class="project-description" style="display:none;">
+            Designed a clean UI focused on usability and accessibility.
+          </p>
 
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
+          <span class="project-link" data-project-link="https://yourlink.com"></span>
 
-    </a>
-  </li>
+        </a>
+      </li>
 
-  <!-- 4 -->
-  <li class="project-item active" data-filter-item data-category="applications">
-    <a href="#" data-project-item>
+      <li class="project-item active" data-filter-item data-category="applications">
+        <a href="#" data-project-item>
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-      </figure>
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+          </figure>
 
-      <h3 class="project-title" data-project-title>Brawlhalla Tracker</h3>
-      <p class="project-category">Applications</p>
+          <h3 class="project-title" data-project-title>Task Manager</h3>
+          <p class="project-category">Applications</p>
 
-      <p class="project-description" style="display:none;">
-        Built a tracking system to monitor gameplay performance and player statistics.
-      </p>
+          <p class="project-description" style="display:none;">
+            Built a task management system to track workflows and productivity.
+          </p>
 
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
+          <span class="project-link" data-project-link="https://yourlink.com"></span>
 
-    </a>
-  </li>
+        </a>
+      </li>
 
-  <!-- 5 -->
-  <li class="project-item active" data-filter-item data-category="web design">
-    <a href="#" data-project-item>
+      <!-- ADD MORE PROJECTS SAME WAY -->
 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-5.png" alt="dsm" loading="lazy">
-      </figure>
+    </ul>
 
-      <h3 class="project-title" data-project-title>DSM Dashboard</h3>
-      <p class="project-category">Web design</p>
+  </section>
 
-      <p class="project-description" style="display:none;">
-        Created a visually appealing dashboard focused on simplifying complex datasets.
-      </p>
-
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
-
-    </a>
-  </li>
-
-  <!-- 6 -->
-  <li class="project-item active" data-filter-item data-category="web design">
-    <a href="#" data-project-item>
-
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-      </figure>
-
-      <h3 class="project-title" data-project-title>MetaSpark Visuals</h3>
-      <p class="project-category">Web design</p>
-
-      <p class="project-description" style="display:none;">
-        Built interactive visual elements and dashboards for data storytelling.
-      </p>
-
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
-
-    </a>
-  </li>
-
-  <!-- 7 -->
-  <li class="project-item active" data-filter-item data-category="web development">
-    <a href="#" data-project-item>
-
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-      </figure>
-
-      <h3 class="project-title" data-project-title>Summary Engine</h3>
-      <p class="project-category">Web development</p>
-
-      <p class="project-description" style="display:none;">
-        Built an automated reporting tool to summarize key insights from datasets.
-      </p>
-
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
-
-    </a>
-  </li>
-
-  <!-- 8 -->
-  <li class="project-item active" data-filter-item data-category="applications">
-    <a href="#" data-project-item>
-
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-      </figure>
-
-      <h3 class="project-title" data-project-title>Task Manager</h3>
-      <p class="project-category">Applications</p>
-
-      <p class="project-description" style="display:none;">
-        Developed a task management system to track workflows and improve productivity.
-      </p>
-
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
-
-    </a>
-  </li>
-
-  <!-- 9 -->
-  <li class="project-item active" data-filter-item data-category="web development">
-    <a href="#" data-project-item>
-
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-      </figure>
-
-      <h3 class="project-title" data-project-title>Arrival Analytics</h3>
-      <p class="project-category">Web development</p>
-
-      <p class="project-description" style="display:none;">
-        Built an analytics dashboard to monitor incoming data streams and trends.
-      </p>
-
-      <span class="project-link" data-project-link="https://yourlink.com"></span>
-
-    </a>
-  </li>
-
-</ul>
+</article>
 
       <!--
         - #BLOG
