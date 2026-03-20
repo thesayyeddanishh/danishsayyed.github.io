@@ -789,22 +789,30 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item active" data-filter-item data-category="web development" data-project-item>
               <a href="#">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+  <figure class="project-img">
+    <div class="project-item-icon-box">
+      <ion-icon name="eye-outline"></ion-icon>
+    </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
+    <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+  </figure>
 
-                <h3 class="project-title">Finance</h3>
+  <h3 class="project-title" data-project-title>Finance</h3>
 
-                <p class="project-category">Web development</p>
+  <p class="project-category">Web development</p>
 
-              </a>
+  <!-- ADD THIS -->
+  <p class="project-description" style="display: none;">
+    A financial analytics dashboard showing KPIs, trends, and real-time insights.
+  </p>
+
+  <!-- ADD THIS -->
+  <span class="project-link" data-project-link="https://yourlink.com" style="display: none;"></span>
+
+</a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
@@ -958,7 +966,31 @@
       </article>
 
 
+<div class="modal-container" data-project-modal>
 
+  <div class="overlay" data-project-overlay></div>
+
+  <section class="testimonials-modal">
+
+    <button class="modal-close-btn" data-project-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="modal-content">
+
+      <h4 class="h3" id="project-modal-title"></h4>
+
+      <p id="project-modal-desc"></p>
+
+      <a href="#" target="_blank" id="project-modal-link" class="form-btn">
+        View Live Project
+      </a>
+
+    </div>
+
+  </section>
+
+</div>
 
 
       <!--
@@ -1256,4 +1288,41 @@ modalCloseBtn.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
   modalContainer.classList.remove("active");
   overlay.classList.remove("active");
+});
+
+
+const projectItems = document.querySelectorAll("[data-project-item]");
+const projectModal = document.querySelector("[data-project-modal]");
+const projectOverlay = document.querySelector("[data-project-overlay]");
+const projectClose = document.querySelector("[data-project-close]");
+
+const modalTitle = document.getElementById("project-modal-title");
+const modalDesc = document.getElementById("project-modal-desc");
+const modalLink = document.getElementById("project-modal-link");
+
+projectItems.forEach(item => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const title = this.querySelector("[data-project-title]").innerText;
+    const desc = this.querySelector(".project-description").innerText;
+    const link = this.querySelector(".project-link").dataset.projectLink;
+
+    modalTitle.innerText = title;
+    modalDesc.innerText = desc;
+    modalLink.href = link;
+
+    projectModal.classList.add("active");
+    projectOverlay.classList.add("active");
+  });
+});
+
+projectClose.addEventListener("click", () => {
+  projectModal.classList.remove("active");
+  projectOverlay.classList.remove("active");
+});
+
+projectOverlay.addEventListener("click", () => {
+  projectModal.classList.remove("active");
+  projectOverlay.classList.remove("active");
 });
