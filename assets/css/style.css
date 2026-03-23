@@ -1893,17 +1893,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* ================= PROJECTS GRID FIX ================= */
 
-/* Mobile (already handled → 1 column) */
-
-/* Tablet */
 @media (min-width: 768px) {
   .projects-posts-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Desktop (THIS is what you wanted) */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .projects-posts-list {
     grid-template-columns: repeat(4, 1fr);
   }
